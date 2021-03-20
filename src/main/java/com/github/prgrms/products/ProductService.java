@@ -20,7 +20,6 @@ public class ProductService {
   @Transactional(readOnly = true)
   public Optional<Product> findById(Long productId) {
     checkNotNull(productId, "productId must be provided");
-
     return productRepository.findById(productId);
   }
 
